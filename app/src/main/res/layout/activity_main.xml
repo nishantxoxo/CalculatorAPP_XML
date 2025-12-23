@@ -8,14 +8,14 @@
 
     <!-- Display -->
     <TextView
-        android:id="@+id/tvDisplay"
+        android:id="@+id/tvInput"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="#EFEFEF"
         android:padding="10dp"
         android:textSize="48sp"
         android:gravity="end|bottom"
-        android:text="0" />
+         />
 
     <!-- Row 1 -->
     <LinearLayout
@@ -56,7 +56,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="/"
             android:layout_margin="2dp" />
     </LinearLayout>
@@ -99,8 +99,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
-            android:text="X"
+            android:onClick="onOperator"
+            android:text="*"
             android:layout_margin="2dp" />
     </LinearLayout>
 
@@ -142,7 +142,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="-"
             android:layout_margin="2dp" />
     </LinearLayout>
@@ -158,18 +158,25 @@
             android:id="@+id/btzero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:onClick="onDigit"
             android:text="0"
             android:layout_margin="2dp" />
-
+        <Button
+            android:id="@+id/btdot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="ondecimal"
+            android:text="."
+            android:layout_margin="2dp" />
         <Button
             android:id="@+id/btnclr"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="CLEAR"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             android:layout_margin="2dp" />
 
         <Button
@@ -178,7 +185,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="+"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_margin="2dp" />
 
 
